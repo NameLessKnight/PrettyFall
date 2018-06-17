@@ -1,0 +1,40 @@
+/* ---- anime-item ---- */
+
+.grid-wrapper {
+    margin: 0 auto;
+    position: relative;
+}
+
+.grid-item {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    margin: 0 auto;
+    left: 0px;
+    top: 0px;
+    transition: transform .6s;
+}
+
+
+.panel {
+    border-radius: 2px;
+    border: 0;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.12),0 1px 6px 0 rgba(0,0,0,0.12);
+}
+
+.panel-primary {
+    border-color: #337ab7;
+}
+
+.panel-heading h5{
+    margin: 5px 5px;
+}
+
+.panel-primary>.panel-heading {
+    background-color: #5f5f5f;
+    border: 0;
+}
+
+.panel-body {
+    padding: 0;
+}
