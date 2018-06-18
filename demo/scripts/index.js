@@ -36,7 +36,6 @@ var waterFall = new Vue({
     methods: {
         init: function(){
             ngFall.initialize();
-            this.addItems();
         },
         addItems: function () {
             $.get("images.json",function(data,status){

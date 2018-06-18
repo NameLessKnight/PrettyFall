@@ -69,17 +69,6 @@
             var container = document.querySelector(this.config.container);
             this.boundary.width = getSize(container).width;
             this.boundary.height = getSize(container).height;
-            /* var horizontalPaddings, style, verticalPaddings;
-            if (this.config.boundary !== window) {
-                style = this.config.boundary.currentStyle || window.getComputedStyle(this.config.boundary);
-                horizontalPaddings = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
-                verticalPaddings = parseFloat(style.paddingTop) + parseFloat(style.paddingBottom);
-                this.boundary.height = this.config.boundary.offsetHeight - verticalPaddings;
-                return this.boundary.width = this.config.boundary.offsetWidth - horizontalPaddings;
-            } else {
-                this.boundary.height = window.innerHeight;
-                return this.boundary.width = window.innerWidth;
-            }*/
         };
 
         PrettyFall.prototype.resizeDebounce = function (fn, delay) {
