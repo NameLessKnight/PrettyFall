@@ -1,18 +1,26 @@
 {
-  "name": "angular-waterfall",
+  "name": "prettyfall",
   "version": "1.0.0",
-  "dependencies": {},
-  "devDependencies": {
-    "grunt": "^0.4.1",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-copy": "^0.5.0",
-    "grunt-contrib-uglify": "^0.4.0"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
+  "description": "PrettyFall - lightweight waterfall/grid layout library with framework wrappers",
+  "main": "dist/prettyfall.umd.js",
+  "module": "dist/prettyfall.esm.js",
   "scripts": {
-    "test": "grunt test"
+    "build": "rollup -c",
+    "postbuild": "node ./build/copyDemo.js",
+    "start": "npx sirv demo --single",
+    "test": "echo \"No tests defined\" && exit 0"
   },
-    "author": "Zed"
+  "keywords": ["waterfall","grid","layout","prettyfall"],
+  "author": "Zed",
+  "license": "MIT",
+  "dependencies": {
+    "get-size": "2.0.2"
+  },
+  "devDependencies": {
+    "rollup": "^2.79.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sirv-cli": "^2.0.0"
+  }
 }

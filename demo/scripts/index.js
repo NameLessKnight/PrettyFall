@@ -39,12 +39,17 @@ var waterFall = new Vue({
         },
         addItems: function () {
             $.get("images.json",function(data,status){
-                var imageLoader = new ImageLoader();
-                data.results.forEach(function (item) {
-                    imageLoader.get(item.url, function () {
-                        ngFall.append(item);
-                    });
-                });
+                            // Use bundled ImageLoader exposed via PrettyFall
+                            if (typeof PrettyFall === 'undefined' || !PrettyFall.ImageLoader) {
+                                console.error('PrettyFall.ImageLoader not available. Ensure dist/prettyfall.umd.js is loaded before index.js');
+                                return;
+                            }
+                            var imageLoader = new PrettyFall.ImageLoader();
+                            data.results.forEach(function (item) {
+                                imageLoader.get(item.url, function () {
+                                    ngFall.append(item);
+                                });
+                            });
             });
         }
     },
